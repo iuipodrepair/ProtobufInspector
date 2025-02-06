@@ -23,7 +23,7 @@ namespace Google.Protobuf.FiddlerInspector
                 return false;
             }
             
-            return null != headers && (headers.ExistsAndContains("Content-Type", "application/x-protobuf") || headers.ExistsAndContains("Content-Type", "application/x-google-protobuf") || headers.ExistsAndContains("Content-Type", "application/protobuf"));
+            return null != headers && (headers.ExistsAndContains("Content-Type", "application/x-protobuf") || headers.ExistsAndContains("Content-Type", "application/x-google-protobuf") || headers.ExistsAndContains("Content-Type", "application/protobuf") || headers.ExistsAndContains("Content-Type", "application/grpc+proto"));
         }
         
         public static byte[] DecodeContent(byte[] body, Fiddler.HTTPHeaders headers)
